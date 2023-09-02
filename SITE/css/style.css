@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Titillium+Web:wght@600&display=swap');
+/* Importando algumas fontes */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    cursor: pointer;
+}
+
+header nav{
+    background-color: #FF9090;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: white;
+}
+
+nav div{
+    display: flex;
+    align-items: center;
+    margin: 35px 150px;
+}
+
+nav img{
+    width: 20px;
+}
