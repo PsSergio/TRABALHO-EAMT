@@ -33,3 +33,45 @@ nav div{
 nav img{
     width: 20px;
 }
+
+.explication-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introduction-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#introduction-title{
+    font-size: 3.5em;
+}
+
+.subtitles{
+    font-size: 3em;
+}
+
+.paragraphy-info{
+    width: 70vw;
+    font-size: 1.3em;
+    text-align: justify;
+    margin-top: 1.7em;
+}
+
+.red-bkg{
+    background-color: #FF9090;
+    padding: 4em 100vw;
+    color: white;
+}
+
+.red-bkg .subtitles{
+    color:black;
+}
+
+.white-bkg{
+    margin: 6em 0 6em 0;
+}
