@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: 0;
     font-family: 'Hammersmith One', sans-serif;
+    overflow-x: hidden;
 }
 
 header{
@@ -14,6 +15,7 @@ header{
     z-index: 999;
     cursor: pointer;
     border-bottom: 2px solid rgba(98, 98, 98, 0.481);
+    width: 100%;
 }
 
 header nav{
@@ -36,7 +38,7 @@ nav img{
 }
 
 .explication-container{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
