@@ -76,3 +76,43 @@ nav img{
 .white-bkg{
     margin: 6em 0 6em 0;
 }
+
+.inputs-container{
+    display: flex;
+    align-items: center;
+    margin-top: 6em;
+}
+
+.inputs-subcontainer{
+    margin-right: 2em;
+}
+
+.inputs-container label{
+    font-size: 1.3em;
+}
+
+.inputs-container span{
+    position: absolute;
+    font-size: 1em;
+    margin-left: 1em;
+    color: #6f6f6f;
+}
+
+.inputs-container input{
+    padding: .5em 0 .5em .5em;
+    width: 16em;
+    border-radius: 15px;
+    border: 1px solid #6f6f6f;
+    font-size: 1em;
+    color: #6f6f6f;
+}
+
+#valorPresente-input{
+    padding: .5em 0 .5em 2.2em;
+    width: 13em;
+}
+
+.input-contents{
+    display: flex;
+    align-items: center;
+}

@@ -42,10 +42,34 @@
             </div>
         </div>
         <div class="calculation-container white-bkg">
-            <div class="introduction-calculation-container">
-                <h1 id="introduction-calculation-title" class="subtitles">Calcule a sua Amortização!</h1>
-                <p id="introduction-calculation-p" class="paragraphy-info">Preencha os dados e descubra o valor total da: prestação, do financiamento e dos juros. Além disso, é possível comparar cada método de amortização de dívida como você quiser.</p>
+            <div class="calculation-subcontainer">
+                <div class="introduction-calculation-container">
+                    <h1 id="introduction-calculation-title" class="subtitles">Calcule a sua Amortização!</h1>
+                    <p id="introduction-calculation-p" class="paragraphy-info">Preencha os dados e descubra o valor total da: prestação, do financiamento e dos juros. Além disso, é possível comparar cada método de amortização de dívida como você quiser.</p>
+                </div>
+                <div class="inputs-container">
+                    <div class="valorPresente-input-container inputs-subcontainer">
+                        <label for="" id="title-input">Valor Presente</label>
+                        <div class="input-contents">
+                            <span id="real-p">R$</span>
+                            <input type="number" name="valorPresente-input" id="valorPresente-input" class="inputs" value="30000.00">
+                        </div>
+                    </div>
+                    <div class="juros-input-container inputs-subcontainer">
+                        <label for="" id="title-input">Taxa de Juros Mensal (%)</label>
+                        <div class="input-contents">
+                            <input type="number" name="juros-input" id="juros-input" class="inputs" value="2.00">
+                        </div>
+                    </div>
+                    <div class="meses-input-container inputs-subcontainer">
+                        <label for="" id="title-input">Número de Meses</label>
+                        <div class="input-contents">
+                            <input type="number" name="meses-input" id="meses-input" class="inputs" value="3">
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </section>
 </body>
