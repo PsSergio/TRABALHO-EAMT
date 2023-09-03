@@ -14,15 +14,18 @@ header{
     top: 0;
     z-index: 999;
     cursor: pointer;
-    border-bottom: 2px solid rgba(98, 98, 98, 0.481);
     width: 100%;
+    margin-bottom: 5em;
 }
 
 header nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #FF9090;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 23px;
     color: white;
 }
@@ -30,7 +33,7 @@ header nav{
 nav div{
     display: flex;
     align-items: center;
-    margin: 35px 150px;
+    margin: 35px 0;
 }
 
 nav img{
