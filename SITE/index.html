@@ -9,11 +9,11 @@
     <header>
         <nav> 
             <div class="left-topico-container"> <!--Adicionado elementos ao um container para facilitar a organização dos tópicos-->
-                <p id="amortizacao-topico">AMORTIZAÇÃO</p>
+                <p id="amortizacao-topico">AMORTIZAÇÃO</p> <!-- Adicionar subtópicos (depois) -->
                 <img src="img/arrow-navBar.png" alt="" class="arrow-navBar">
             </div>
             <div class="mid-topico-container">
-                <p id="calculo-topico">CÁLCULO</p>
+                <p id="calculo-topico">CÁLCULO</p> <!-- Adicionar subtópicos (depois) -->
                 <img src="img/arrow-navBar.png" alt="" class="arrow-navBar">
             </div>
             <div class="right-topico-container">
@@ -109,6 +109,82 @@
                         <div class="input-contents">
                             <input type="number" name="meses-input" id="meses-input" class="inputs" value="3">
                         </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <div class="table1-content">
+                        <div class="op-calculation"> <!-- fazer botao interativo para escolher metodo de calculo (fazer depois) -->
+                            <p>PRICE</p>
+                            <div class="arrows">
+                                <img src="img/arrow-navBar.png" alt="" class="arrow-top">
+                                <img src="img/arrow-navBar.png" alt="" class="arrow-down">
+                            </div>
+                        </div>
+                        <table id="table1" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="n-th">Nº</th>
+                                    <th class="valorParcela-th">Valor da Parcela</th>
+                                    <th class="amortizacao-th">Amortização</th>
+                                    <th class="juros-th">Juros</th>
+                                    <th class="saldoDevedor-th">Saldo Devedor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr> <!-- ESSA TAG SE REPETE!! É USADA NA CRIACAO DAS LINHAS DA TABELA-->
+                                    <td class="n-td">1</td>
+                                    <td class="valorParcela-td">R$ 1.586,13</td> <!-- EXEMPLOS DE NÚMEROS PARA VERIFICAR A ESTRUTURA-->
+                                    <td class="amortizacao-td">R$ 986,13</td>
+                                    <td class="juros-td">R$ 600,00</td>
+                                    <td class="saldoDevedor-td">R$ 29.013,87</td>
+                                </tr>
+                                <tr>
+                                    <td class="n-td">2</td>
+                                    <td class="valorParcela-td">R$ 1.586,13</td>
+                                    <td class="amortizacao-td">R$ 1.005,86</td>
+                                    <td class="juros-td">R$ 580,28</td>
+                                    <td class="saldoDevedor-td">R$ 28.008,01</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="table2-content">
+                        <div class="op-calculation">
+                            <p>PRICE</p>
+                            <div class="arrows">
+                                <img src="img/arrow-navBar.png" alt="" class="arrow-top">
+                                <img src="img/arrow-navBar.png" alt="" class="arrow-down">
+                            </div>
+                        </div>
+                        <table id="table2" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="n-th">Nº</th>
+                                    <th class="valorParcela-th">Valor da Parcela</th>
+                                    <th class="amortizacao-th">Amortização</th>
+                                    <th class="juros-th">Juros</th>
+                                    <th class="saldoDevedor-th">Saldo Devedor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="n-td">1</td>
+                                    <td class="valorParcela-td">R$ 1.586,13</td>
+                                    <td class="amortizacao-td">R$ 986,13</td>
+                                    <td class="juros-td">R$ 600,00</td>
+                                    <td class="saldoDevedor-td">R$ 29.013,87</td>
+                                </tr>
+                                <tr>
+                                    <td class="n-td">2</td>
+                                    <td class="valorParcela-td">R$ 1.586,13</td>
+                                    <td class="amortizacao-td">R$ 1.005,86</td>
+                                    <td class="juros-td">R$ 580,28</td>
+                                    <td class="saldoDevedor-td">R$ 28.008,01</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
                     </div>
                 </div>
             </div>

@@ -122,3 +122,82 @@ nav img{
     align-items: center;
 }
 
+.table-container{
+    margin-top: 5em;
+    display: flex;
+}
+
+.table1-content{
+    border-right: 1px solid #ADADAD;
+}
+
+.table1-content, .table2-content{
+    width: 50%;
+}
+
+.op-calculation{
+    display: flex;
+    border: 1px solid #363636;
+    width: 9.5em;
+    height: 3.7em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #414141;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+.op-calculation p{
+    font-size: 2em;
+}
+
+.op-calculation div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5em;
+}
+
+.arrow-top{
+    margin-bottom: -.5em;
+    width: 1.5em;
+    transform: rotate(-90deg);
+}
+
+.arrow-down{
+    width: 1.5em;
+    transform: rotate(90deg);
+}
+
+table{
+    margin-top: 2em;
+    border-collapse: collapse;
+    width: 100%;
+    /* background-color: rgb(253, 170, 170); */
+}
+
+thead tr{
+    border-bottom: 1px solid #ADADAD;
+}
+
+th{
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+
+tbody tr{
+    border-bottom: 1px solid #ADADAD;
+}
+
+td{
+    padding: 2em 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+.n-td{
+    font-size: 1.2em;
+    font-weight: 600;
+}

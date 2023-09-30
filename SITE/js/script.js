@@ -12,4 +12,3 @@ for(let i = 0; i < inputs.length; i++){ // funcao para pegar valor de input e de
         console.log(inputValue)
     })
 }
-
