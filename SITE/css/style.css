@@ -11,15 +11,17 @@
 
 header{
     position: sticky;
-    top: 0;
+    top: 2em;    
     z-index: 999;
     cursor: pointer;
     width: 100%;
     margin-bottom: 5em;
+    user-select: none; 
 }
 
 header nav{
     position: fixed;
+    /* top: -5em; */
     top: 0;
     width: 100%;
     background-color: #FF9090;
@@ -28,16 +30,64 @@ header nav{
     justify-content: space-around;
     font-size: 23px;
     color: white;
+
 }
 
 nav div{
     display: flex;
     align-items: center;
-    margin: 35px 0;
+    margin: 1em 0;
 }
 
 nav img{
     width: 20px;
+}
+
+.topico-com-abas-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dropDown{
+    display: none;
+    position: fixed;
+    background-color: #fc8080;
+    margin-top: 2.7em;
+    margin-left: 5em;
+    border-radius: 10px;
+}
+
+#dropDown2{
+    margin-left: 3.2em;
+
+}
+
+.dropDown-ul{
+    cursor: pointer;
+    /* z-index: 998; */
+    position: sticky;
+}
+
+.dropDown ul li{
+    cursor: pointer;
+    margin: .7em .2em;
+    position: sticky;
+}
+
+.dropDown ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropDown-ul li a:hover{
+    color: #dfdfdf;
+}
+
+.arrow-navBar{
+    rotate: 0deg;
+    transition: all 0.3s ease-in-out;
 }
 
 .explication-container{

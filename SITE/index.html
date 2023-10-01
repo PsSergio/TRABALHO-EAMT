@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <title>Amortilização - Explicação e Cálculo</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
-        <nav> 
-            <div class="left-topico-container"> <!--Adicionado elementos ao um container para facilitar a organização dos tópicos-->
-                <p id="amortizacao-topico">AMORTIZAÇÃO</p> <!-- Adicionar subtópicos (depois) -->
-                <img src="img/arrow-navBar.png" alt="" class="arrow-navBar">
+        <nav>
+            <div class="left-topico-container topico-com-abas-container">
+                <!--Adicionado elementos ao um container para facilitar a organização dos tópicos-->
+                <div class="topico topico-com-abas">
+                    <p id="amortizacao-topico">AMORTIZAÇÃO</p> <!-- Adicionar subtópicos (depois) -->
+                    <img src="img/arrow-navBar.png" alt="" class="arrow-navBar">
+                </div>
+
+                <div class="dropDown">
+                        <ul class="dropDown-ul">
+                            <li class="dropDown-li"><a href="#title1-title">O que é?</a></li>
+                            <li class="dropDown-li"><a href="#title2-title">Tipos de amortização</a></li>
+                            <li class="dropDown-li"><a href="#title3-title">Vantagens e Desvantagens</a></li>
+                            <li class="dropDown-li"><a href="#title5-title">Quando usar?</a></li>
+                        </ul>
+                </div>
             </div>
-            <div class="mid-topico-container">
-                <p id="calculo-topico">CÁLCULO</p> <!-- Adicionar subtópicos (depois) -->
-                <img src="img/arrow-navBar.png" alt="" class="arrow-navBar">
+            <div class="mid-topico-container topico-com-abas-container">
+                <div class="topico topico-com-abas">
+                    <p id="calculo-topico">CÁLCULO</p> <!-- Adicionar subtópicos (depois) -->
+                    <img src="img/arrow-navBar.png" alt="" class="arrow-navBar">
+                </div>
+                <div class="dropDown" id="dropDown2">
+                        <ul class="dropDown-ul">
+                            <li class="dropDown-li"><a href="">Tabela</a></li>
+                            <li class="dropDown-li"><a href="">Baixar Executável</a></li>
+                        </ul>
+            </div>
             </div>
             <div class="right-topico-container">
-                <p id="sobre-topico">SOBRE</p>
+                <p id="sobre-topico">SOBRE</p> <!-- Adicionar scroll-->
             </div>
         </nav>
     </header>
@@ -25,21 +47,40 @@
         <div class="explication-container">
             <div class="introduction-container white-bkg"> <!--ADD CLASS 'white-bgk' when the background is white-->
                 <h1 id="introduction-title">AMORTIZAÇÃO</h1>
-                <p id="introduction-p" class="paragraphy-info">Se você já fez um financiamento ou empréstimo, já deve ter se deparado com o termo amortização, um conceito bastante comum no mercado financeiro usado para se referir a uma característica específica na quitação de dívidas. Embora não seja nenhuma novidade para os brasileiros, ainda existem diversas dúvidas sobre como funciona, o que diz a legislação e o cálculo. Além de ser um conceito importante para todos os cidadãos (pessoas físicas), a amortização também é um assunto de interesse dos empresários. Quer saber mais sobre o tema? Então, siga com a leitura que explicaremos tudo sobre o tema.</p>
+                <p id="introduction-p" class="paragraphy-info">Se você já fez um financiamento ou empréstimo, já deve
+                    ter se deparado com o termo amortização, um conceito bastante comum no mercado financeiro usado para
+                    se referir a uma característica específica na quitação de dívidas. Embora não seja nenhuma novidade
+                    para os brasileiros, ainda existem diversas dúvidas sobre como funciona, o que diz a legislação e o
+                    cálculo. Além de ser um conceito importante para todos os cidadãos (pessoas físicas), a amortização
+                    também é um assunto de interesse dos empresários. Quer saber mais sobre o tema? Então, siga com a
+                    leitura que explicaremos tudo sobre o tema.</p>
             </div>
             <div class="title1-container red-bkg"> <!--ADD CLASS 'red-bkg' when the background is red-->
                 <h1 id="title1-title" class="subtitles">O que é? E pra que serve?</h1>
-                <p id="title1-p" class="paragraphy-info">Amortização é o pagamento constante de uma dívida até quitá-la. Em caso de financiamento ou empréstimo amortização significa antecipar as últimas parcelas do saldo devedor para reduzir ele e talvez obter desconto nos juros, esse processo é denominado como amortização de parcelas. </p>
-                <p id="title1-p2" class="paragraphy-info">O processo de amortizar uma dívida é solicitado pelo titular devedor, que deseja quitar sua dívida em pouco tempo. Para conseguir realizar esse processo o titular deve fornecer informações como valor inicial da dívida, valor principal da dívida, taxa de juros e prestações, em caso de financiamento.</p>
-            </div> 
+                <p id="title1-p" class="paragraphy-info">Amortização é o pagamento constante de uma dívida até quitá-la.
+                    Em caso de financiamento ou empréstimo amortização significa antecipar as últimas parcelas do saldo
+                    devedor para reduzir ele e talvez obter desconto nos juros, esse processo é denominado como
+                    amortização de parcelas. </p>
+                <p id="title1-p2" class="paragraphy-info">O processo de amortizar uma dívida é solicitado pelo titular
+                    devedor, que deseja quitar sua dívida em pouco tempo. Para conseguir realizar esse processo o
+                    titular deve fornecer informações como valor inicial da dívida, valor principal da dívida, taxa de
+                    juros e prestações, em caso de financiamento.</p>
+            </div>
             <div class="title2-container white-bkg">
                 <h1 id="title2-title" class="subtitles">Tipos de Amortização</h1>
                 <p id="title2-p" class="paragraphy-info">Os principais sistemas de amortização são:</p>
                 <p id="title2-p2" class="paragraphy-info">SAC (Sistema de amortização constante)</p>
-                <p id="title2-p3" class="paragraphy-info">No SAC o valor das parcelas não se altera durante a vigência do contrato, porém ocorre a oscilação do valor dos juros e da amortização. Os juros vão diminuindo a cada parcela paga e, consequentemente o valor das parcelas a serem pagas também, os juros mais altos são cobrados no início do pagamento da dívida e vão diminuindo a cada mês. Isso ocorre pois o valor da parcela é definido pelo valor da amortização mais os juros.</p>
+                <p id="title2-p3" class="paragraphy-info">No SAC o valor das parcelas não se altera durante a vigência
+                    do contrato, porém ocorre a oscilação do valor dos juros e da amortização. Os juros vão diminuindo a
+                    cada parcela paga e, consequentemente o valor das parcelas a serem pagas também, os juros mais altos
+                    são cobrados no início do pagamento da dívida e vão diminuindo a cada mês. Isso ocorre pois o valor
+                    da parcela é definido pelo valor da amortização mais os juros.</p>
                 <p id="title2-p4" class="paragraphy-info">Sistema PRICE (Sistema Francês)</p>
-                <p id="title2-p5" class="paragraphy-info">No sistema PRICE o valor das parcelas não se altera, assim como a porcentagem de juros, o valor pago no início será o mesmo valor pago no final. O valor calculado para cada parcela depende dos seguintes elementos: valor da dívida, taxa de juros cobrada a cada mês e o tempo em que a dívida será quitada.</p>
-                
+                <p id="title2-p5" class="paragraphy-info">No sistema PRICE o valor das parcelas não se altera, assim
+                    como a porcentagem de juros, o valor pago no início será o mesmo valor pago no final. O valor
+                    calculado para cada parcela depende dos seguintes elementos: valor da dívida, taxa de juros cobrada
+                    a cada mês e o tempo em que a dívida será quitada.</p>
+
             </div>
             <div class="title3-container red-bkg">
                 <h1 id="title3-title" class="subtitles">Vantagens e Desvantagens (PRICE)</h1>
@@ -81,21 +122,29 @@
             </div>
             <div class="title5-container red-bkg">
                 <h1 id="title5-title" class="subtitles">Quando usar?</h1>
-                <p id="title5-p" class="paragraphy-info">O uso da amortização depende muito do contexto em que você está lidando. Porém, é possível ter uma ideia de quando a amortização é uma boa opção, sendo elas: Empréstimos e Financiamentos, Contabilidade e Depreciação de Ativos, Investimentos de Longo Prazo e Pagamento de dívidas. Nesses casos, a amortização é muito boa para saber quanto você pagará, reduzir o valor de ativos intangíveis, cálculo de ganhos ou perdas e as consequências de alguns pagamentos.</p>
+                <p id="title5-p" class="paragraphy-info">O uso da amortização depende muito do contexto em que você está
+                    lidando. Porém, é possível ter uma ideia de quando a amortização é uma boa opção, sendo elas:
+                    Empréstimos e Financiamentos, Contabilidade e Depreciação de Ativos, Investimentos de Longo Prazo e
+                    Pagamento de dívidas. Nesses casos, a amortização é muito boa para saber quanto você pagará, reduzir
+                    o valor de ativos intangíveis, cálculo de ganhos ou perdas e as consequências de alguns pagamentos.
+                </p>
             </div>
         </div>
         <div class="calculation-container white-bkg"> <!--Esse container inclue a parte das tabelas-->
             <div class="calculation-subcontainer">
                 <div class="introduction-calculation-container">
                     <h1 id="introduction-calculation-title" class="subtitles">Calcule a sua Amortização!</h1>
-                    <p id="introduction-calculation-p" class="paragraphy-info">Preencha os dados e descubra o valor total da: prestação, do financiamento e dos juros. Além disso, é possível comparar cada método de amortização de dívida como você quiser.</p>
+                    <p id="introduction-calculation-p" class="paragraphy-info">Preencha os dados e descubra o valor
+                        total da: prestação, do financiamento e dos juros. Além disso, é possível comparar cada método
+                        de amortização de dívida como você quiser.</p>
                 </div>
                 <div class="inputs-container">
                     <div class="valorPresente-input-container inputs-subcontainer">
                         <label for="" id="title-input">Valor Presente</label>
                         <div class="input-contents">
                             <span id="real-p">R$</span>
-                            <input type="number" name="valorPresente-input" id="valorPresente-input" class="inputs" value="30000.00" step="0.01">
+                            <input type="number" name="valorPresente-input" id="valorPresente-input" class="inputs"
+                                value="30000.00" step="0.01">
                         </div>
                     </div>
                     <div class="juros-input-container inputs-subcontainer">
@@ -113,7 +162,8 @@
                 </div>
                 <div class="table-container">
                     <div class="table1-content">
-                        <div class="op-calculation"> <!-- fazer botao interativo para escolher metodo de calculo (fazer depois) -->
+                        <div class="op-calculation">
+                            <!-- fazer botao interativo para escolher metodo de calculo (fazer depois) -->
                             <p>PRICE</p>
                             <div class="arrows">
                                 <img src="img/arrow-navBar.png" alt="" class="arrow-top">
@@ -133,7 +183,8 @@
                             <tbody>
                                 <tr> <!-- ESSA TAG SE REPETE!! É USADA NA CRIACAO DAS LINHAS DA TABELA-->
                                     <td class="n-td">1</td>
-                                    <td class="valorParcela-td">R$ 1.586,13</td> <!-- EXEMPLOS DE NÚMEROS PARA VERIFICAR A ESTRUTURA-->
+                                    <td class="valorParcela-td">R$ 1.586,13</td>
+                                    <!-- EXEMPLOS DE NÚMEROS PARA VERIFICAR A ESTRUTURA-->
                                     <td class="amortizacao-td">R$ 986,13</td>
                                     <td class="juros-td">R$ 600,00</td>
                                     <td class="saldoDevedor-td">R$ 29.013,87</td>
@@ -147,7 +198,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        
+
                     </div>
                     <div class="table2-content">
                         <div class="op-calculation">
@@ -184,13 +235,14 @@
                                 </tr>
                             </tbody>
                         </table>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <script src="js/script.js"></script>
 </body>
+
 </html>
