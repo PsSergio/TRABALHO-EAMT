@@ -46,8 +46,8 @@ nav img{
 .topico-com-abas-container{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-
 
 .dropDown{
     display: none;
@@ -112,7 +112,7 @@ nav img{
 }
 
 .paragraphy-info{
-    width: 70vw;
+    width: 50vw;
     font-size: 1.3em;
     text-align: justify;
     margin-top: 1.7em;
@@ -132,7 +132,15 @@ nav img{
     margin: 6em 0 6em 0;
 }
 
+.calculation-subcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .inputs-container{
+    width: 50vw;
     display: flex;
     align-items: center;
     margin-top: 6em;
@@ -173,8 +181,9 @@ nav img{
 }
 
 .table-container{
-    margin-top: 5em;
+    margin-top: 10em;
     display: flex;
+    width: 70vw;
 }
 
 .table1-content{
@@ -186,26 +195,33 @@ nav img{
 }
 
 .op-calculation{
+    width: 9.5em;
+    user-select: none;
+    margin-left: 1em;
+}
+
+.button-op-calculation-container{
     display: flex;
     border: 1px solid #363636;
-    width: 9.5em;
+    /* width: 9.5em; */
     height: 3.7em;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     color: #414141;
     cursor: pointer;
-    margin-left: 1em;
+    /* margin-left: 1em; */
 }
 
-.op-calculation p{
+.button-op-calculation-container p{
     font-size: 2em;
 }
 
-.op-calculation div{
+.button-op-calculation-container div{
     display: flex;
     flex-direction: column;
-    margin-left: 1.5em;
+    margin-left: 1em;
+
 }
 
 .arrow-top{
@@ -217,6 +233,29 @@ nav img{
 .arrow-down{
     width: 1.5em;
     transform: rotate(90deg);
+}
+
+.dropDown-calculo{
+    background-color: #ffffff;
+    font-size: 2em;
+    border: 1px solid #363636;
+    border-top: none;
+    display: none;
+    position: absolute;
+    width: 4.7em;
+    cursor: pointer;
+    
+}
+
+.dropDown-calculo ul li{
+    transition: all 0.3s ease-in-out;
+    /* margin-left: .3em; */
+    padding-left: .3em;
+    width: 100%;
+}
+
+.dropDown-calculo ul li:hover{
+    background-color: #d1d1d1;
 }
 
 table{
