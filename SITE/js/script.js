@@ -41,6 +41,24 @@ for(let i = 0; i < topicoComAbas.length; i++){
 
 //scroll do header
 
+let ultimaPosicao = 0;
+
+document.addEventListener("scroll", function scrollHeader(){
+    const nav = document.querySelector("nav"); 
+    let atualPosicao = window.scrollY;
+
+    if(atualPosicao > ultimaPosicao) {
+        nav.style.top = '-5em'
+        TiraDropDown(dropDown);
+
+    } else {
+        nav.style.top = '0'
+        
+    }
+
+    ultimaPosicao = atualPosicao;
+
+})
 
 
 //INPUTS
@@ -83,12 +101,26 @@ for(let i = 0; i < opButtonCalculo.length; i++){
 }
 
 const optionsDropDownCalculo = ['PRICE', 'SAC', 'SACRE', 'MEJS'];
-const ElementLiDropDownCalculo1 = document.getElementsByClassName("op-dropDown-calculo1");
-// terminar
+const arrayElementLi = [document.getElementsByClassName("op-dropDown-calculo1"), document.getElementsByClassName("op-dropDown-calculo2")];
 
-for(let i = 0; i < ElementLiDropDownCalculo1.length; i++){
-    ElementLiDropDownCalculo1[i].addEventListener("click", () =>{
-        document.getElementById("button-op-calculation-p1").innerHTML = optionsDropDownCalculo[i]
-        // console.log(optionsDropDownCalculo[i]);
-    })
+for(let j = 0; j < arrayElementLi.length; j++){
+    for(let i = 0; i < arrayElementLi[j].length; i++){
+        arrayElementLi[j][i].addEventListener("click", () =>{
+
+            document.getElementsByClassName("button-op-calculation")[j].innerHTML = optionsDropDownCalculo[i]
+            TiraDropDown(dropDownCalculo)
+            abaButtonOpen = false;
+            if(i === 0){ // colocar formula para a tabela PRICE
+                console.log(optionsDropDownCalculo[i])
+            }else if(i === 1){ // SAC
+                console.log(optionsDropDownCalculo[i])
+            }else if(i === 2){ // SACRE
+                console.log(optionsDropDownCalculo[i])
+            }else if(i === 3){ // MEJS
+                console.log(optionsDropDownCalculo[i])
+            }
+        })
+
+    }
 }
+
