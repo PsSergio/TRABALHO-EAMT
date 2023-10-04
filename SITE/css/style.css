@@ -7,6 +7,7 @@
     box-sizing: 0;
     font-family: 'Hammersmith One', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -290,4 +291,42 @@ td{
 .n-td{
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.download-button{
+    background-color: #FF9090;
+    border: #ADADAD;
+    color: #FFF;
+    font-size: 2em;
+    border-radius: 15px;
+    height: 2.7em;
+    width: 5.5em;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+    margin-bottom : 20px;
+}
+
+.download-button:hover{
+    transform: scale(0.97);
+}
+
+.footer{
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    background-color:  #FF9090;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+}
+
+.footer-title{
+    padding-top: 50px;
+}
+
+.footer-integrantes{
+    margin-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
 }

@@ -34,7 +34,7 @@
                 <div class="dropDown" id="dropDown2">
                         <ul class="dropDown-ul">
                             <li class="dropDown-li"><a href="">Tabela</a></li>
-                            <li class="dropDown-li"><a href="">Baixar Executável</a></li>
+                            <li class="dropDown-li"><a href="#download-p">Baixar Executável</a></li>
                         </ul>
             </div>
             </div>
@@ -133,7 +133,7 @@
         <div class="calculation-container white-bkg"> <!--Esse container inclue a parte das tabelas-->
             <div class="calculation-subcontainer">
                 <div class="introduction-calculation-container">
-                    <h1 id="introduction-calculation-title" class="subtitles">Calcule a sua Amortização!</h1>
+                    <h1 id="introduction-calculation-title" class="subtitles" id="calculo-title">Calcule a sua Amortização!</h1>
                     <p id="introduction-calculation-p" class="paragraphy-info">Preencha os dados e descubra o valor
                         total da: prestação, do financiamento e dos juros. Além disso, é possível comparar cada método
                         de amortização de dívida como você quiser.</p>
@@ -207,6 +207,12 @@
                                     <td class="saldoDevedor-td">R$ 28.008,01</td>
                                 </tr>
                             </tbody>
+                            <tfoot>
+                                <td class="n-td">Totais</td> 
+                                <td class="valorParcela-td">R$ valor 1</td> <!--Soma dos valores de parcelas-->
+                                <td class="amortizacao-td">R$ valor 2</td> <!--Soma dos valores de amortização-->
+                                <td class="juros-td">R$ valor 3</td> <!--Soma dos valores de juros-->
+                            </tfoot>
                         </table>
 
                     </div>
@@ -255,12 +261,45 @@
                                     <td class="saldoDevedor-td">R$ 28.008,01</td>
                                 </tr>
                             </tbody>
+                            <tfoot>
+                                <td class="n-td">Totais</td> 
+                                <td class="valorParcela-td">R$ valor 1</td> <!--Soma dos valores de parcelas-->
+                                <td class="amortizacao-td">R$ valor 2</td> <!--Soma dos valores de amortização-->
+                                <td class="juros-td">R$ valor 3</td> <!--Soma dos valores de juros-->
+                            </tfoot>
                         </table>
-
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="explication-container">
+            <div class="download white-bkg">
+                <p id="download-p" class="paragraphy-info">Quer um programa executável em seu computador com as mesmas funções desse site? Então baixe o nosso calculador de Amortização totalmente seguro e de graça!</p>
+                <br>
+                <button class="download-button">Download</button> <!--Linkar arquivo para download-->
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-title"><p>Integrantes</p></div>
+            <div class="footer-integrantes">
+                <div class="footer-integrantes">
+                    <ul>
+                        <li>Gabriel Joaquim</li>
+                        <li>João Victor</li>
+                        <li>Mariana</li> <!--Colocar sobrenome-->
+                        <li>Matheus Jacob</li>
+                    </ul>
+                </div>
+                <div class="footer-integrantes">
+                    <ul>
+                        <li>Matheus Pinter</li>
+                        <li>Paola</li> <!--Colocar sobrenome-->
+                        <li>Paulo Sergio</li>
+                        <li>Pedro Nascimento</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-title"><p>Copyright © 2023</p></div>
         </div>
     </section>
     <script src="js/script.js"></script>
