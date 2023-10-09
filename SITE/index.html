@@ -5,6 +5,8 @@
     <title>Amortilização - Explicação e Cálculo</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.maskMoney.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -142,9 +144,8 @@
                     <div class="valorPresente-input-container inputs-subcontainer">
                         <label for="" id="title-input">Valor Presente</label>
                         <div class="input-contents">
-                            <span id="real-p">R$</span>
-                            <input type="number" name="valorPresente-input" id="valorPresente-input" class="inputs"
-                                value="30000.00" step="0.01">
+                            <!-- <span id="real-p">R$</span> -->
+                            <input type="text" name="valorPresente-input" id="valorPresente-input" class="inputs">
                         </div>
                     </div>
                     <div class="juros-input-container inputs-subcontainer">
@@ -206,7 +207,7 @@
                         <div class="op-calculation">
                             <!-- fazer botao interativo para escolher metodo de calculo (fazer depois) -->
                             <div class="button-op-calculation-container">
-                                <p id="button-op-calculation-p2" class="button-op-calculation">PRICE</p>
+                                <p id="button-op-calculation-p2" class="button-op-calculation">SAC</p>
                                 <div class="arrows">
                                     <img src="img/arrow-navBar.png" alt="" class="arrow-top">
                                     <img src="img/arrow-navBar.png" alt="" class="arrow-down">
@@ -277,5 +278,4 @@
     </section>
     <script src="js/script.js"></script>
 </body>
-
 </html>

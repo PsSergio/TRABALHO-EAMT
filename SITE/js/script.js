@@ -2,7 +2,16 @@ let valorPresente = 30000;
 let juros = 2;
 let numMeses = 3;
 
-// HEADER
+$(function() {
+    $("#valorPresente-input").maskMoney({ // formata o input 
+        prefix:'R$ ', 
+        thousands:'.', 
+        decimal:',', 
+    });
+    $("#valorPresente-input").maskMoney('mask', 30000.00) // define valor inicial do input
+})
+
+// HEADERg
 
 function TiraDropDown(elemento){
 
@@ -68,21 +77,34 @@ document.addEventListener("scroll", function scrollHeader(){
 //INPUTS
 const inputs = document.getElementsByClassName("inputs") // como tem vários el. com a classe "inputs", ele transforma essa var em um array
 
+$("#valorPresente-input").change( function(){
+    valorPresente = $("#valorPresente-input").maskMoney('unmasked')[0];
+    console.log("Valor Presente: " + valorPresente);
+    for(let k = 1; k <= 2; k++){
+        for(let j = 0; j < 2; j++){
+            tbody[j].innerHTML = "";
+            mudaTabela(j, valorPresente, numMeses, juros, tbody[j]);
+        }
+    }
+});
+
 for(let i = 0; i < inputs.length; i++){ // funcao para pegar valor de input e deixá-lo com 2 casas decimais
     inputs[i].addEventListener("change", function InputValues(){
         
-
-        let inputValue = Number(inputs[i].value)
-
-        if(i == 0){ 
-            valorPresente = inputValue.toFixed(2);
-            console.log("Valor Presente: " + valorPresente);
-        }if(i == 1){ 
-            juros = inputValue.toFixed(2);
+        let inputValue = inputs[i].value
+        if(i == 1){ 
+            juros = Number(inputValue).toFixed(2);
             console.log("Juros: " + juros);
         }else if(i == 2){
-            numMeses = inputValue.toFixed(0); 
+            numMeses = Number(inputValue).toFixed(0); 
             console.log("Mes: " + numMeses);
+        }
+
+        for(let k = 1; k <= 2; k++){
+            for(let j = 0; j < 2; j++){
+                tbody[j].innerHTML = "";
+                mudaTabela(j, valorPresente, numMeses, juros, tbody[j]);
+            }
         }
 
     })
@@ -115,6 +137,10 @@ const optionsDropDownCalculo = ['PRICE', 'SAC', 'SACRE', 'MEJS'];
 const arrayElementLi = [document.getElementsByClassName("op-dropDown-calculo1"), document.getElementsByClassName("op-dropDown-calculo2")];
 const tbody = document.getElementsByClassName("tbody");
 
+for(let j = 0; j < arrayElementLi.length; j++){ // colocando as tabelas como padrao no site
+    mudaTabela(j, valorPresente, numMeses, juros, tbody[j]);
+}
+
 for(let j = 0; j < arrayElementLi.length; j++){
     for(let i = 0; i < arrayElementLi[j].length; i++){
         arrayElementLi[j][i].addEventListener("click", () =>{
@@ -138,7 +164,7 @@ function linhaTabela(tabela, mes, valorParcela, amortizacao, juros, saldoDevedor
         <td class="valorParcela-td">R$ ${valorParcela.toFixed(2)}</td>
         <td class="amortizacao-td">R$ ${amortizacao.toFixed(2)}</td>
         <td class="juros-td">R$ ${juros.toFixed(2)}</td>
-        <td class="saldoDevedor-td">R$ ${saldoDevedor.toFixed(2)}</td>
+        <td class="saldoDevedor-td">R$ ${Math.abs(saldoDevedor).toFixed(2)}</td>
     `
     tabela.appendChild(linhaTabela);
 }
@@ -158,11 +184,26 @@ function calculoPrice(emprestimo, numMeses, taxa, tabela){
     }
 }
 
+function calculoSac(emprestimo, numMeses, taxa, tabela){
+    let saldoDevedor = emprestimo;
+    let amortizacao = saldoDevedor/numMeses;
+    let juros;
+    let valorParcela; 
+
+    for(let i = 1; i <= numMeses; i++){
+        juros = saldoDevedor * (taxa/100);
+        valorParcela = amortizacao + juros;
+        saldoDevedor -= amortizacao;
+
+        linhaTabela(tabela, i, valorParcela, amortizacao, juros, saldoDevedor)
+    }
+}
+
 function mudaTabela(i, valorPresente, numMeses, juros, tabela){
     if(i === 0){ // colocar formula para a tabela PRICE
         calculoPrice(valorPresente, numMeses, juros, tabela);
     }else if(i === 1){ // SAC
-        console.log(optionsDropDownCalculo[i])
+        calculoSac(valorPresente, numMeses, juros, tabela);
     }else if(i === 2){ // SACRE
         console.log(optionsDropDownCalculo[i])
     }else if(i === 3){ // MEJS

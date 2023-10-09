@@ -172,10 +172,10 @@ nav img{
     color: #6f6f6f;
 }
 
-#valorPresente-input{
+/* #valorPresente-input{
     padding: .5em 0 .5em 2.2em;
     width: 13em;
-}
+} */
 
 .input-contents{
     display: flex;
