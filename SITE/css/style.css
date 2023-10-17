@@ -25,7 +25,7 @@ header nav{
     /* top: -5em; */
     top: 0;
     width: 100%;
-    background-color: #FF9090;
+    background-color: #e2abab;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -63,6 +63,11 @@ nav img{
 #dropDown2{
     margin-left: 3.2em;
 
+}
+
+#dropDown3{
+    margin-top: 5.8em;
+    margin-left: 0.0em;
 }
 
 .dropDown-ul{
@@ -294,16 +299,17 @@ td{
 }
 
 .download-button{
-    background-color: #FF9090;
+    background-color: #e2abab;
     border: #ADADAD;
     color: #FFF;
     font-size: 2em;
     border-radius: 15px;
-    height: 2.7em;
+    height: 2.0em;
     width: 5.5em;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.75);
     margin-left: 20px;
     margin-bottom : 20px;
+    cursor: pointer;
 }
 
 .download-button:hover{
@@ -329,4 +335,8 @@ td{
     padding-right: 30px;
     padding-left: 30px;
     display: flex;
+}
+
+.right-topico-container{
+   
 }

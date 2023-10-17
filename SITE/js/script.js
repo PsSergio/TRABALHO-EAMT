@@ -197,6 +197,7 @@ function calculoSac(emprestimo, numMeses, taxa, tabela){
 
         linhaTabela(tabela, i, valorParcela, amortizacao, juros, saldoDevedor)
     }
+
 }
 
 function mudaTabela(i, valorPresente, numMeses, juros, tabela){
