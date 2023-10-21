@@ -2,6 +2,7 @@ let valorPresente = 30000;
 let juros = 2;
 let numMeses = 3;
 
+
 $(function() {
     $("#valorPresente-input").maskMoney({ // formata o input 
         prefix:'R$ ', 
@@ -154,9 +155,15 @@ for(let j = 0; j < arrayElementLi.length; j++){
         })
 
     }
+
 }
 
+
+
 function linhaTabela(tabela, mes, valorParcela, amortizacao, juros, saldoDevedor){
+    
+
+
     let linhaTabela = document.createElement("tr");
     linhaTabela.innerHTML = 
     `
@@ -167,21 +174,44 @@ function linhaTabela(tabela, mes, valorParcela, amortizacao, juros, saldoDevedor
         <td class="saldoDevedor-td">R$ ${Math.abs(saldoDevedor).toFixed(2)}</td>
     `
     tabela.appendChild(linhaTabela);
+
 }
 
+
 function calculoPrice(emprestimo, numMeses, taxa, tabela){
+
     let valorParcela = emprestimo * (taxa/100) / ( 1 - (1 + (taxa/100)) ** -numMeses)
     let juros;
     let amortizacao;
     let saldoDevedor = emprestimo;
+    let totalParcela = 0;
+    let totalAmortizacao = 0;
+    let totalJuros = 0;
 
     for(let i = 1; i <= numMeses; i++){
         juros = saldoDevedor * (taxa/100);
         amortizacao = valorParcela - juros;
         saldoDevedor -= amortizacao;
-        
+
+        totalParcela += valorParcela;
+        totalAmortizacao += amortizacao;
+        totalJuros += juros;
+
         linhaTabela(tabela, i, valorParcela, amortizacao, juros, saldoDevedor)
+
     }
+
+    let conteudoParcela = document.createElement("tr")
+
+    conteudoParcela.innerHTML =
+    `
+        <td class="n-td">Total</td>
+        <td class="t-p">R$ ${totalParcela.toFixed(2)}</td>
+        <td class="t-p">R$ ${totalAmortizacao.toFixed(2)}</td>
+        <td class="t-p">R$ ${totalJuros.toFixed(2)}</td>
+    `
+
+    tabela.appendChild(conteudoParcela)
 }
 
 function calculoSac(emprestimo, numMeses, taxa, tabela){
@@ -190,14 +220,33 @@ function calculoSac(emprestimo, numMeses, taxa, tabela){
     let juros;
     let valorParcela; 
 
+    let totalParcela = 0;
+    let totalAmortizacao = 0;
+    let totalJuros = 0;
+
     for(let i = 1; i <= numMeses; i++){
         juros = saldoDevedor * (taxa/100);
         valorParcela = amortizacao + juros;
         saldoDevedor -= amortizacao;
 
+        totalParcela += valorParcela;
+        totalAmortizacao += amortizacao;
+        totalJuros += juros;
+
         linhaTabela(tabela, i, valorParcela, amortizacao, juros, saldoDevedor)
     }
 
+    let conteudoFooter = document.createElement("tr")
+
+    conteudoFooter.innerHTML =
+    `
+        <td class="n-td">Total</td>
+        <td class="t-p">R$ ${totalParcela.toFixed(2)}</td>
+        <td class="t-p">R$ ${totalAmortizacao.toFixed(2)}</td>
+        <td class="t-p">R$ ${totalJuros.toFixed(2)}</td>
+    `
+
+    tabela.appendChild(conteudoFooter)
 }
 
 function mudaTabela(i, valorPresente, numMeses, juros, tabela){
