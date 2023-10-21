@@ -201,9 +201,9 @@ function calculoPrice(emprestimo, numMeses, taxa, tabela){
 
     }
 
-    let conteudoParcela = document.createElement("tr")
+    let conteudoFooter = document.createElement("tr")
 
-    conteudoParcela.innerHTML =
+    conteudoFooter.innerHTML =
     `
         <td class="n-td">Total</td>
         <td class="t-p">R$ ${totalParcela.toFixed(2)}</td>
@@ -211,7 +211,7 @@ function calculoPrice(emprestimo, numMeses, taxa, tabela){
         <td class="t-p">R$ ${totalJuros.toFixed(2)}</td>
     `
 
-    tabela.appendChild(conteudoParcela)
+    tabela.appendChild(conteudoFooter)
 }
 
 function calculoSac(emprestimo, numMeses, taxa, tabela){
