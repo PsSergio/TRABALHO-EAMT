@@ -57,7 +57,7 @@ nav img{
     background-color: #fc8080;
     margin-top: 2.7em;
     margin-left: 5em;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 #dropDown2{
@@ -147,9 +147,10 @@ nav img{
 
 
 .inputs-container{
-    width: 50vw;
+    width: 65vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 6em;
 }
 
